@@ -39,19 +39,19 @@ grep_groupname $groupname
 ### main if block here
 if [ $result1 != 0 ] && [ $result2 != 0 ]
 then
-    echo "Both are not found - why are you asking me this?"
+    echo "Both are not found"
 elif [ $result1 = 0 ] && [ $result2 = 0 ] && [ $result3 = 0 ]
 then
         echo "Membership vaild!"
 elif [ $result1 = 0 ] && [ $result2 = 0 ] && [ $result3 != 0 ]
 then
-        echo "Membership invalid but available to join."
+        echo "Membership invalid but user can join group."
 elif [ $result1 != 0 ] && [ $result2 = 0 ] 
 then
-    echo "One exists, one does not. You figure out which."
+    echo "One exists, one does not."
 elif [ $result1 = 0 ] && [ $result2 != 0 ]
 then
-        echo "One exists, one does not. You figure out which."
+        echo "One exists, one does not."
 fi
 
 
